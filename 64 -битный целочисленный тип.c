@@ -3,7 +3,8 @@
 int main(){
     long n, m, x;
     long n1 = 0;
-    int i, j, z;
+    int i, j;
+    int z = 0;
     int n2 = 0;
     int n3;
     int l, k;
@@ -20,24 +21,16 @@ int main(){
         }
     }
 
-    for(l = 0; l < n; l++){
-        for(k = 0; k < m; k++){ // запись чисел по строкам
-            b[l][k] = n2 + 1;
-            n2++;
+
+
+    for(i = 0; i < n; i++){
+        for(j = 0; j < m; j++){ // запись чисел по столбцам
+            z = z +1;
+            if(a[i][j] == x)
+            printf("%d\n", z);
         }
     }
 
-    n3 = n1 - x;
 
-    for(k = 0; k < n; k++){
-        for(l = 0; l < m; l++){ 
-            if(b[l][k] == x){
-                z = (l + 1) * n + k + 1;
-            }
-        }
-    }
-
-    printf("%d", z);
-     
     return 0;
 }
